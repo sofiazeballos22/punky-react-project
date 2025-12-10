@@ -1,9 +1,9 @@
-import { openWhatsApp } from '@/utils/whatsapp';
+import { openWhatsApp } from "@/utils/whatsapp";
 
 const ComoFuncionaPage = () => {
   return (
-    <section 
-      id="como-funciona" 
+    <section
+      id="como-funciona"
       className="bg-white/60 border-y border-slate-100/80 py-20 px-6 md:px-12"
     >
       <div className="max-w-7xl mx-auto">
@@ -18,9 +18,9 @@ const ComoFuncionaPage = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 max-w-5xl mx-auto">
           {/* Paso 1 */}
-          <div className="reveal bg-white rounded-3xl shadow-card border border-slate-100 p-7 flex flex-col gap-4 active">
+          <div className="reveal bg-white rounded-3xl shadow-card border border-slate-100 p-7 flex flex-col gap-4 active transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-br hover:from-violet-50 hover:to-purple-50 hover:-translate-y-1">
             <div className="w-10 h-10 rounded-2xl bg-violet-100 text-violet-700 flex items-center justify-center font-bold text-lg">
               1
             </div>
@@ -34,7 +34,7 @@ const ComoFuncionaPage = () => {
           </div>
 
           {/* Paso 2 */}
-          <div className="reveal delay-100 bg-white rounded-3xl shadow-card border border-slate-100 p-7 flex flex-col gap-4 active">
+          <div className="reveal delay-100 bg-white rounded-3xl shadow-card border border-slate-100 p-7 flex flex-col gap-4 active transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-br hover:from-indigo-50 hover:to-blue-50 hover:-translate-y-1">
             <div className="w-10 h-10 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-lg">
               2
             </div>
@@ -49,7 +49,7 @@ const ComoFuncionaPage = () => {
           </div>
 
           {/* Paso 3 */}
-          <div className="reveal delay-200 bg-white rounded-3xl shadow-card border border-slate-100 p-7 flex flex-col gap-4 active">
+          <div className="reveal delay-200 bg-white rounded-3xl shadow-card border border-slate-100 p-7 flex flex-col gap-4 active transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-br hover:from-emerald-50 hover:to-teal-50 hover:-translate-y-1">
             <div className="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
               3
             </div>
@@ -65,8 +65,10 @@ const ComoFuncionaPage = () => {
         </div>
 
         <div className="mt-10 text-center reveal active">
-          <button 
-            onClick={() => openWhatsApp('Hola Punky, explicame paso a paso qué puedo hacer.')}
+          <button
+            onClick={() =>
+              openWhatsApp("Hola Punky, explicame paso a paso qué puedo hacer.")
+            }
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-slate-900 text-white text-sm font-semibold hover:bg-black transition shadow-lg shadow-slate-900/10"
           >
             Empezar mi chat ahora
