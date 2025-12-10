@@ -8,15 +8,15 @@
     animation: float 6s ease-in-out infinite;
     will-change: transform, box-shadow;
   }
-  
+
   .float-animation * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
-  
+
   .bg-blobs {
-    background-image: 
+    background-image:
       radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
       radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
   }
@@ -24,10 +24,13 @@
 
 /* Animación de flotación con elevación */
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate3d(0, 0, 0);
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   }
+
   50% {
     transform: translate3d(0, -20px, 0);
     box-shadow: 0 35px 60px -12px rgb(0 0 0 / 0.35);
@@ -88,10 +91,14 @@
 }
 
 @keyframes blink {
-  0%, 49% {
+
+  0%,
+  49% {
     opacity: 1;
   }
-  50%, 100% {
+
+  50%,
+  100% {
     opacity: 0;
   }
 }
@@ -122,7 +129,7 @@ details[open] summary::after {
 }
 
 /* Contenido del details con transición suave */
-details > *:not(summary) {
+details>*:not(summary) {
   animation: slideDown 0.5s ease-out;
 }
 
@@ -131,6 +138,7 @@ details > *:not(summary) {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -139,9 +147,9 @@ details > *:not(summary) {
 
 /* Hover suave con iluminación para FAQ */
 details:hover {
-  background: linear-gradient(135deg, 
-    rgba(248, 250, 252, 1) 0%, 
-    rgba(245, 243, 255, 1) 100%);
+  background: linear-gradient(135deg,
+      rgba(248, 250, 252, 1) 0%,
+      rgba(245, 243, 255, 1) 100%);
   border-color: rgba(167, 139, 250, 0.3);
   transition: all 0.3s ease-in-out;
 }
