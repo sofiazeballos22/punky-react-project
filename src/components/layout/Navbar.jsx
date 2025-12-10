@@ -1,4 +1,4 @@
-import { openWhatsApp } from '@/utils/whatsapp';
+import { openWhatsApp } from "@/utils/whatsapp";
 
 const Navbar = () => {
   return (
@@ -19,51 +19,57 @@ const Navbar = () => {
         </a>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a 
-            href="#como-funciona" 
-            className="px-3 py-2 rounded-full transition-all duration-300 hover:text-punkyAccentStart hover:bg-gradient-to-r hover:from-violet-50/50 hover:via-purple-50/50 hover:to-indigo-50/50"
+          <a
+            href="#como-funciona"
+            className="px-4 py-2.5 rounded-full transition-all duration-300 hover:text-punkyAccentStart hover:bg-violet-50"
           >
             Cómo funciona
           </a>
-          <a 
-            href="#soluciones" 
-            className="px-3 py-2 rounded-full transition-all duration-300 hover:text-punkyAccentStart hover:bg-gradient-to-r hover:from-violet-50/50 hover:via-purple-50/50 hover:to-indigo-50/50"
+          <a
+            href="#soluciones"
+            className="px-4 py-2.5 rounded-full transition-all duration-300 hover:text-punkyAccentStart hover:bg-violet-50"
           >
             Soluciones
           </a>
-          <a 
-            href="#fuerzas" 
-            className="px-3 py-2 rounded-full transition-all duration-300 hover:text-punkyAccentStart hover:bg-gradient-to-r hover:from-violet-50/50 hover:via-purple-50/50 hover:to-indigo-50/50"
+          <a
+            href="#fuerzas"
+            className="px-4 py-2.5 rounded-full transition-all duration-300 hover:text-punkyAccentStart hover:bg-violet-50"
           >
             Fuerzas
           </a>
-          <a 
-            href="#abuelos" 
-            className="px-3 py-2 rounded-full transition-all duration-300 hover:text-punkyAccentStart hover:bg-gradient-to-r hover:from-violet-50/50 hover:via-purple-50/50 hover:to-indigo-50/50"
+          <a
+            href="#abuelos"
+            className="px-4 py-2.5 rounded-full transition-all duration-300 hover:text-punkyAccentStart hover:bg-violet-50"
           >
             Abuelos
           </a>
-          <a 
-            href="#compras" 
-            className="px-3 py-2 rounded-full transition-all duration-300 hover:text-punkyAccentStart hover:bg-gradient-to-r hover:from-violet-50/50 hover:via-purple-50/50 hover:to-indigo-50/50"
+          <a
+            href="#compras"
+            className="px-4 py-2.5 rounded-full transition-all duration-300 hover:text-punkyAccentStart hover:bg-violet-50"
           >
             Compras
           </a>
 
-          <button 
-            onClick={() => openWhatsApp('Hola Punky, quiero hacer una consulta.')}
+          <button
+            onClick={() =>
+              openWhatsApp("Hola Punky, quiero hacer una consulta.")
+            }
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-semibold bg-gradient-to-r from-punkyAccentStart to-punkyAccentEnd text-white shadow-glow hover:scale-105 transition"
           >
             Chatear por WhatsApp
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              className="w-4 h-4" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
               strokeWidth="2"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
             </svg>
           </button>
         </div>
