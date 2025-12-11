@@ -12,7 +12,7 @@ export default {
         punkyAccentEnd: '#6366f1',
       },
       fontFamily: {
-        display: ['system-ui', '-apple-system', 'sans-serif'],
+        display: ['Space Grotesk', 'sans-serif'],
         sans: ['system-ui', '-apple-system', 'sans-serif'],
       },
       boxShadow: {
