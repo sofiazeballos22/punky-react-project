@@ -7,10 +7,11 @@ const HeroPage = () => {
   };
 
   return (
-    <section 
-      id="top" 
-      className="relative max-w-7xl mx-auto px-6 md:px-12 pt-14 pb-24 lg:pt-20 lg:pb-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
-    >
+    <div className="relative bg-gradient-to-br from-violet-100 via-purple-50 to-indigo-100">
+      <section 
+        id="top" 
+        className="relative max-w-7xl mx-auto px-6 md:px-12 pt-14 pb-24 lg:pt-20 lg:pb-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+      >
       {/* Texto */}
       <div className="space-y-8 text-center lg:text-left z-20">
         <div className="reveal active inline-flex items-center bg-violet-50 border border-violet-100 rounded-full px-4 py-2 mb-2">
@@ -77,7 +78,8 @@ const HeroPage = () => {
 
       {/* Mockup celular */}
       <PhoneMockup />
-    </section>
+      </section>
+    </div>
   );
 };
 
