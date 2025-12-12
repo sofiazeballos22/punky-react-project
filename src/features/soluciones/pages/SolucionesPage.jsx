@@ -8,7 +8,7 @@ const SolucionesPage = () => {
   const cardRefs = useCardReveal(6, 450); // 6 cards con delay de 450ms
   const solutions = [
     {
-      badge: "🅿️  Punky  Fuerzas",
+      badge: "Punky  Fuerzas",
       title: "Fuerzas Armadas y de Seguridad",
       description:
         "Normativa oficial, recibos de haberes, descuentos, obra social y trámites internos. Reglas específicas por fuerza y protocolo claro para crédito por Decreto 1412.",
@@ -18,7 +18,7 @@ const SolucionesPage = () => {
       delay: 0,
     },
     {
-      badge: "🅿️  Punky  Créditos",
+      badge: "Punky  Créditos",
       title: "Crédito por recibo o CBU",
       description:
         "Análisis de disponible al instante, sin hojas de cálculo. Explicación de montos, cuotas y límites. Acompañamiento hasta la firma, siempre que sea conveniente para vos.",
@@ -28,7 +28,7 @@ const SolucionesPage = () => {
       delay: 50,
     },
     {
-      badge: "🅿️  Punky  Abuelos",
+      badge: "Punky  Abuelos",
       title: "Jubilados y pensionados",
       description:
         "Explicaciones lentas, claras y sin letra chica. Haberes, descuentos, obras sociales, turnos, reclamos y defensa ante cobros indebidos.",
@@ -38,7 +38,7 @@ const SolucionesPage = () => {
       delay: 100,
     },
     {
-      badge: "🅿️ Trámites Inteligentes",
+      badge: "Trámites Inteligentes",
       title: "Trámites nacionales y provinciales",
       description:
         "Punky traduce el lenguaje estatal a castellano simple: qué formulario, qué link, qué turno y qué hacer si algo sale mal.",
@@ -48,7 +48,7 @@ const SolucionesPage = () => {
       delay: 150,
     },
     {
-      badge: "🅿️ Defensa del Consumidor",
+      badge: "Defensa del Consumidor",
       title: "Compras, bancos y estafas",
       description:
         "Compras no entregadas, cargos raros, tarjetas, homebanking y estafas online. Punky te dice qué capturas guardar y dónde reclamar.",
@@ -58,7 +58,7 @@ const SolucionesPage = () => {
       delay: 200,
     },
     {
-      badge: "🅿️ Legal · 🅿️ Contable · 🅿️ Fraudes",
+      badge: "Legal · Contable · Fraudes",
       title: "Tus temas legales y de impuestos, en simple",
       description:
         "Monotributo, AFIP, ARCA, contratos básicos y dudas legales frecuentes. Primera orientación y organización de tu caso para que llegues mejor a tu profesional.",
