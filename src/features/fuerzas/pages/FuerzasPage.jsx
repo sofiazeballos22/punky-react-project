@@ -1,8 +1,10 @@
 import { openWhatsApp } from "@/utils/whatsapp";
 import useTitleReveal from "@/hooks/useTitleReveal";
+import useSingleCardReveal from "@/hooks/useSingleCardReveal";
 
 const FuerzasPage = () => {
   const { titleRef, subtitleRef } = useTitleReveal();
+  const cardRef = useSingleCardReveal();
 
   return (
     <section
@@ -83,7 +85,7 @@ const FuerzasPage = () => {
           </p>
         </div>
 
-        <div className="reveal delay-150 active">
+        <div ref={cardRef} className="card-reveal-bottom">
           <div className="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 shadow-[0_30px_80px_rgba(0,0,0,0.6)] backdrop-blur">
             <p className="text-xs uppercase tracking-[0.25em] text-slate-300 mb-4">
               Ejemplo de caso real
