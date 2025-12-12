@@ -26,7 +26,7 @@ const HeroPage = () => {
 
           <h1 className="reveal active delay-100 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] text-punkyDark">
             Tus trámites, finanzas y derechos,
-            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-punkyAccentStart to-punkyAccentEnd mt-1">
+            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-punkyAccentStart to-punkyAccentEnd mt-1 pb-2">
               resueltos hablando con <span className="punky-title">Punky</span>.
             </span>
           </h1>
