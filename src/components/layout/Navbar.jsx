@@ -49,15 +49,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-100/70">
+    <nav className="w-full sticky top-0 z-40 bg-slate-50/95 backdrop-blur border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-xl bg-punkyDark flex items-center justify-center text-white font-display font-bold text-xl">
-            P
-          </div>
+          <div className="punky-logo">P</div>
           <div className="flex flex-col">
-            <span className="font-display font-bold text-2xl leading-none text-punkyDark">
-              Punky®
+            <span className="punky-brand-title">
+              Punky<span className="punky-brand-registered">®</span>
             </span>
             <span className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
               Asistente financiero y social IA
