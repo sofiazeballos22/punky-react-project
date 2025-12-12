@@ -1,9 +1,12 @@
-import { openWhatsApp } from '@/utils/whatsapp';
+import { openWhatsApp } from "@/utils/whatsapp";
+import useTitleReveal from "@/hooks/useTitleReveal";
 
 const ComprasPage = () => {
+  const { titleRef, subtitleRef } = useTitleReveal();
+
   return (
-    <section 
-      id="compras" 
+    <section
+      id="compras"
       className="py-24 px-6 md:px-12 bg-slate-950 text-white relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_10%,rgba(124,58,237,0.45),transparent_60%),radial-gradient(circle_at_80%_90%,rgba(56,189,248,0.45),transparent_55%)] opacity-80" />
@@ -11,18 +14,27 @@ const ComprasPage = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr,1fr] gap-14 items-center">
           <div className="reveal space-y-5 active">
-            <p className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[12px] font-semibold">
-              🅿️ Punky Compras · Comprá mejor, no más caro
+            <p className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[12px] font-semibold">
+              🅿️ <span className="punky-title">Punky</span> Compras · Comprá
+              mejor, no más caro
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">
-              Elegís el producto, Punky te ayuda a conseguirlo y ver si podés
-              financiarlo.
+            <h2
+              ref={titleRef}
+              className="title-reveal font-display text-3xl md:text-4xl font-bold leading-tight"
+            >
+              Elegís el producto, <span className="punky-title">Punky</span> te
+              ayuda a conseguirlo y ver si podés financiarlo.
             </h2>
-            <p className="text-slate-200 text-sm md:text-base max-w-xl">
-              Con Punky Compras podés mandar un link de Mercado Libre, una
-              captura de pantalla o simplemente describir lo que buscás. El
-              asistente compara opciones, te sugiere alternativas de mejor
-              relación precio–calidad y te dice si podés pagarlo con Punky
+            <p
+              ref={subtitleRef}
+              className="subtitle-reveal text-slate-200 text-sm md:text-base max-w-xl"
+            >
+              Con <span className="punky-title">Punky</span> Compras podés
+              mandar un link de Mercado Libre, una captura de pantalla o
+              simplemente describir lo que buscás. El asistente compara
+              opciones, te sugiere alternativas de mejor relación precio–calidad
+              y te dice si podés pagarlo con{" "}
+              <span className="punky-title">Punky</span>
               Créditos.
             </p>
 
@@ -37,25 +49,32 @@ const ComprasPage = () => {
               <li className="flex gap-3">
                 <span className="mt-1 w-2 h-2 rounded-full bg-emerald-400" />
                 <span>
-                  Punky revisa reseñas, precio, características clave y te
-                  sugiere opciones reales del mercado.
+                  <span className="punky-title">Punky</span> revisa reseñas,
+                  precio, características clave y te sugiere opciones reales del
+                  mercado.
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-1 w-2 h-2 rounded-full bg-emerald-400" />
                 <span>
-                  Si te sirve, conecta con Punky Créditos para evaluar si podés
-                  financiar esa compra desde tu recibo.
+                  Si te sirve, conecta con{" "}
+                  <span className="punky-title">Punky</span> Créditos para
+                  evaluar si podés financiar esa compra desde tu recibo.
                 </span>
               </li>
             </ul>
 
             <div className="pt-3">
-              <button 
-                onClick={() => openWhatsApp('Hola Punky, quiero que me ayudes con una compra.')}
+              <button
+                onClick={() =>
+                  openWhatsApp(
+                    "Hola Punky, quiero que me ayudes con una compra."
+                  )
+                }
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-punkyDark text-sm font-semibold hover:bg-slate-100 transition shadow-lg shadow-black/40"
               >
-                Enviar mi producto a Punky por WhatsApp
+                Enviar mi producto a <span className="punky-title">Punky</span>{" "}
+                por WhatsApp
                 <span>🛒</span>
               </button>
             </div>

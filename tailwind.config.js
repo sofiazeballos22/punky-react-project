@@ -8,15 +8,15 @@ export default {
     extend: {
       colors: {
         punkyDark: '#1e293b',
-        punkyAccentStart: '#8b5cf6',
-        punkyAccentEnd: '#6366f1',
+        punkyAccentStart: '#7C3AED',
+        punkyAccentEnd: '#4F46E5',
       },
       fontFamily: {
-        display: ['system-ui', '-apple-system', 'sans-serif'],
+        display: ['Space Grotesk', 'sans-serif'],
         sans: ['system-ui', '-apple-system', 'sans-serif'],
       },
       boxShadow: {
-        'glow': '0 0 20px rgba(139, 92, 246, 0.4)',
+        'glow': '0 0 20px rgba(124, 58, 237, 0.4)',
         'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
       },
       animation: {
