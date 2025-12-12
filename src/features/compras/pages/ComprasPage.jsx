@@ -1,6 +1,9 @@
 import { openWhatsApp } from "@/utils/whatsapp";
+import useTitleReveal from "@/hooks/useTitleReveal";
 
 const ComprasPage = () => {
+  const { titleRef, subtitleRef } = useTitleReveal();
+
   return (
     <section
       id="compras"
@@ -15,11 +18,17 @@ const ComprasPage = () => {
               🅿️ <span className="punky-title">Punky</span> Compras · Comprá
               mejor, no más caro
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">
+            <h2
+              ref={titleRef}
+              className="title-reveal font-display text-3xl md:text-4xl font-bold leading-tight"
+            >
               Elegís el producto, <span className="punky-title">Punky</span> te
               ayuda a conseguirlo y ver si podés financiarlo.
             </h2>
-            <p className="text-slate-200 text-sm md:text-base max-w-xl">
+            <p
+              ref={subtitleRef}
+              className="subtitle-reveal text-slate-200 text-sm md:text-base max-w-xl"
+            >
               Con <span className="punky-title">Punky</span> Compras podés
               mandar un link de Mercado Libre, una captura de pantalla o
               simplemente describir lo que buscás. El asistente compara
