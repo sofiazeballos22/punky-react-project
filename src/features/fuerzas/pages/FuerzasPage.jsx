@@ -16,8 +16,9 @@ const FuerzasPage = () => {
       <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="reveal space-y-6 active">
           <p className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[12px] font-semibold tracking-wide">
-            🅿️ <span className="punky-title">Punky</span> Fuerzas ·
-            Especializado por fuerza
+            <span className="punky-logo-badge">P</span>{" "}
+            <span className="punky-title">Punky</span> Fuerzas · Especializado
+            por fuerza
           </p>
           <h2
             ref={titleRef}
