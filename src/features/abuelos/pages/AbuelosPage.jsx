@@ -121,7 +121,7 @@ const AbuelosPage = () => {
                 text="Me vino menos sueldo este mes, no entiendo por qué."
                 isUser={true}
                 speed={70}
-                delay={500}
+                delay={1500}
               />
 
               {/* Respuesta de Punky (derecha) */}
@@ -130,8 +130,8 @@ const AbuelosPage = () => {
                 name="Punky"
                 text="Tranquila, vamos a verlo juntos. Mandame una foto clara de tu recibo de este mes y, si podés, del mes anterior. Yo te voy marcando qué cambió."
                 isUser={false}
-                speed={35}
-                delay={5000}
+                speed={65}
+                delay={6000}
               />
 
               {/* Explicación de Punky (derecha, continuación) */}
@@ -140,8 +140,8 @@ const AbuelosPage = () => {
                 name="Punky"
                 text="Acá aparece un nuevo descuento llamado 'Servicio X'. Te explico qué significa y cómo hacer el reclamo para que te lo devuelvan."
                 isUser={false}
-                speed={35}
-                delay={12000}
+                speed={65}
+                delay={17000}
               />
             </div>
 
