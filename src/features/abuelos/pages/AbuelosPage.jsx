@@ -39,7 +39,7 @@ const AbuelosPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div
               ref={smallCardRefs[0]}
-              className="card-reveal-left bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card"
+              className="card-reveal-left bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card transition-transform duration-300 hover:scale-110 hover:z-10"
             >
               <p className="font-semibold text-punkyDark mb-1">
                 💰 Haberes y descuentos
@@ -51,7 +51,7 @@ const AbuelosPage = () => {
             </div>
             <div
               ref={smallCardRefs[1]}
-              className="card-reveal-right bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card"
+              className="card-reveal-right bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card transition-transform duration-300 hover:scale-110"
             >
               <p className="font-semibold text-punkyDark mb-1">
                 🏥 Obras sociales y turnos
@@ -63,7 +63,7 @@ const AbuelosPage = () => {
             </div>
             <div
               ref={smallCardRefs[2]}
-              className="card-reveal-left bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card"
+              className="card-reveal-left bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card transition-transform duration-300 hover:scale-110 hover:z-10"
             >
               <p className="font-semibold text-punkyDark mb-1">
                 🧾 Cobros indebidos
@@ -75,7 +75,7 @@ const AbuelosPage = () => {
             </div>
             <div
               ref={smallCardRefs[3]}
-              className="card-reveal-right bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card"
+              className="card-reveal-right bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card transition-transform duration-300 hover:scale-110"
             >
               <p className="font-semibold text-punkyDark mb-1">
                 📂 Trámites previsionales
