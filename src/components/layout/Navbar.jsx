@@ -26,20 +26,20 @@ const Navbar = () => {
 
   return (
     <nav className="w-full sticky top-0 z-40 bg-slate-50/95 backdrop-blur border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 md:px-6 lg:px-12 py-4 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3">
           <div className="punky-logo">P</div>
           <div className="flex flex-col">
             <span className="punky-brand-title">
               Punky<span className="punky-brand-registered">®</span>
             </span>
-            <span className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
+            <span className="text-[11px] md:text-[9px] lg:text-[11px] uppercase tracking-[0.18em] md:tracking-[0.15em] lg:tracking-[0.18em] text-slate-500">
               Asistente financiero y social IA
             </span>
           </div>
         </a>
 
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+        <div className="hidden md:flex items-center md:gap-3 lg:gap-8 text-sm font-medium">
           <a
             href="#como-funciona"
             className={getLinkClass("como-funciona")}
@@ -80,7 +80,7 @@ const Navbar = () => {
             onClick={() =>
               openWhatsApp("Hola Punky, quiero hacer una consulta.")
             }
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-semibold bg-gradient-to-r from-punkyAccentStart to-punkyAccentEnd text-white shadow-glow hover:scale-105 transition"
+            className="hidden lg:inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-semibold bg-gradient-to-r from-punkyAccentStart to-punkyAccentEnd text-white shadow-glow hover:scale-105 transition"
           >
             Chatear por WhatsApp
             <svg
