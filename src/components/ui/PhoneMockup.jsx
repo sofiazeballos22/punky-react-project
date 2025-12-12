@@ -44,12 +44,19 @@ const PhoneMockup = () => {
 
             <div className="self-start bg-slate-100 p-3 rounded-3xl rounded-tl-sm max-w-[90%] shadow-sm">
               <p
-                className="mb-2 text-slate-800"
+                className="mb-2 text-slate-800 flex flex-wrap items-center gap-1"
                 style={{ textRendering: "optimizeLegibility" }}
               >
-                🅿️ Fuerzas · 🅿️ Abuelos · 🅿️ Trámites · 🅿️ Defensa del
-                Consumidor · 🅿️ Créditos · 🅿️ Cheques · 🅿️ Compras · 🅿️ Legal ·
-                🅿️ Contable · 🅿️ Fraudes
+                <span className="punky-logo-badge">P</span> Fuerzas ·{" "}
+                <span className="punky-logo-badge">P</span> Abuelos ·{" "}
+                <span className="punky-logo-badge">P</span> Trámites ·{" "}
+                <span className="punky-logo-badge">P</span> Defensa del
+                Consumidor · <span className="punky-logo-badge">P</span>{" "}
+                Créditos · <span className="punky-logo-badge">P</span> Cheques ·{" "}
+                <span className="punky-logo-badge">P</span> Compras ·{" "}
+                <span className="punky-logo-badge">P</span> Legal ·
+                <span className="punky-logo-badge">P</span> Contable ·{" "}
+                <span className="punky-logo-badge">P</span> Fraudes
               </p>
               <p
                 className="text-slate-700 font-medium"
