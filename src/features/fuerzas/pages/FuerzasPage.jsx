@@ -1,32 +1,36 @@
-import { openWhatsApp } from '@/utils/whatsapp';
+import { openWhatsApp } from "@/utils/whatsapp";
 
 const FuerzasPage = () => {
   return (
-    <section 
-      id="fuerzas" 
+    <section
+      id="fuerzas"
       className="relative py-24 px-6 md:px-12 overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white"
     >
       <div className="absolute inset-y-0 right-0 w-[460px] bg-gradient-to-tl from-punkyAccentStart/30 to-punkyAccentEnd/10 opacity-40 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="reveal space-y-6 active">
-          <p className="inline-flex items-center px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[12px] font-semibold tracking-wide">
-            🅿️ Punky Fuerzas · Especializado por fuerza
+          <p className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[12px] font-semibold tracking-wide">
+            🅿️ <span className="punky-title">Punky</span> Fuerzas ·
+            Especializado por fuerza
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">
             El módulo que entiende tu recibo, tu jerarquía y tu fuerza.
           </h2>
           <p className="text-sm md:text-base text-slate-200 max-w-xl">
-            Punky Fuerzas fue entrenado para hablar el idioma de cada fuerza:
-            Policía Federal, Ciudad, Bonaerense, provinciales, SPF, PSA,
-            Gendarmería, Prefectura, Ejército, Armada y Fuerza Aérea.
+            <span className="punky-title">Punky</span> Fuerzas fue entrenado
+            para hablar el idioma de cada fuerza: Policía Federal, Ciudad,
+            Bonaerense, provinciales, SPF, PSA, Gendarmería, Prefectura,
+            Ejército, Armada y Fuerza Aérea.
           </p>
 
           <ul className="space-y-3 text-sm text-slate-200">
             <li className="flex gap-3">
               <span className="mt-1 w-2 h-2 rounded-full bg-emerald-400" />
               <span>
-                <strong className="text-white">Análisis según protocolo:</strong>{' '}
+                <strong className="text-white">
+                  Análisis según protocolo:
+                </strong>{" "}
                 detecta tu fuerza y aplica las reglas específicas de Decreto
                 1412 (manual o automático según corresponda).
               </span>
@@ -34,24 +38,28 @@ const FuerzasPage = () => {
             <li className="flex gap-3">
               <span className="mt-1 w-2 h-2 rounded-full bg-emerald-400" />
               <span>
-                <strong className="text-white">Haberes y descuentos:</strong>{' '}
-                interpreta tu recibo, explica cada código y te ayuda a
-                entender qué te están descontando.
+                <strong className="text-white">Haberes y descuentos:</strong>{" "}
+                interpreta tu recibo, explica cada código y te ayuda a entender
+                qué te están descontando.
               </span>
             </li>
             <li className="flex gap-3">
               <span className="mt-1 w-2 h-2 rounded-full bg-emerald-400" />
               <span>
-                <strong className="text-white">Trámites internos:</strong>{' '}
-                guías básicas para licencias, junta médica, pases, ascensos y
+                <strong className="text-white">Trámites internos:</strong> guías
+                básicas para licencias, junta médica, pases, ascensos y
                 certificados de servicio.
               </span>
             </li>
           </ul>
 
           <div className="pt-4">
-            <button 
-              onClick={() => openWhatsApp('Hola Punky, soy de una fuerza y quiero que revises mi recibo.')}
+            <button
+              onClick={() =>
+                openWhatsApp(
+                  "Hola Punky, soy de una fuerza y quiero que revises mi recibo."
+                )
+              }
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-punkyDark text-sm font-semibold hover:bg-slate-100 transition shadow-lg shadow-black/30"
             >
               Hablar con Punky Fuerzas por WhatsApp
@@ -61,8 +69,8 @@ const FuerzasPage = () => {
 
           <p className="pt-2 text-[12px] text-slate-400">
             Regla de contención: si entrás por Punky Fuerzas primero vas a
-            recibir orientación informativa. El crédito sólo se ofrece si vos
-            lo pedís o cuando ya entiendas tu situación.
+            recibir orientación informativa. El crédito sólo se ofrece si vos lo
+            pedís o cuando ya entiendas tu situación.
           </p>
         </div>
 
@@ -73,14 +81,14 @@ const FuerzasPage = () => {
             </p>
             <div className="bg-black/40 rounded-2xl border border-white/10 p-4 text-[13px] text-slate-100 space-y-3">
               <p className="font-semibold">
-                👮 Usuario:{' '}
+                👮 Usuario:{" "}
                 <span className="font-normal">
                   "Soy suboficial de Gendarmería, quiero saber cuánto puedo
                   sacar por Decreto."
                 </span>
               </p>
               <p>
-                🧠 Punky:{' '}
+                🧠 Punky:{" "}
                 <span className="text-slate-200">
                   "Gracias por confiar, vamos paso a paso. Primero voy a
                   analizar tu recibo de haberes. Mandame una foto clara de la
@@ -91,7 +99,7 @@ const FuerzasPage = () => {
                 ✔ Al recibir cada archivo: "Gracias, recibí tu archivo."
               </p>
               <p>
-                💬 Resultado:{' '}
+                💬 Resultado:{" "}
                 <span className="text-slate-200">
                   "Según tu disponible, el sistema detecta que podés acceder
                   hasta $ XXX.XXX en cuotas de $ XX.XXX. Si te sirve, te guío
