@@ -211,6 +211,12 @@
   transform: perspective(800px) rotateY(0deg) scale(1);
 }
 
+/* Hover con zoom centrado en todas las resoluciones */
+.card-reveal-left:hover,
+.card-reveal-right:hover {
+  transform-origin: center center !important;
+}
+
 /* Animación 3D de derecha a izquierda */
 .card-reveal-right {
   opacity: 0;
