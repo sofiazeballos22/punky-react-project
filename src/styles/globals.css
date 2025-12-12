@@ -157,8 +157,8 @@ details[open] summary::after {
   transform: rotate(45deg);
 }
 
-/* Contenido del details con transición suave */
-details>*:not(summary) {
+/* Contenido del details con transición suave - MEJORADO */
+.faq-content-animate {
   animation: slideDown 0.5s ease-out;
 }
 
