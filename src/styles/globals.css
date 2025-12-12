@@ -24,6 +24,11 @@
     @apply text-[12px] self-end;
     font-weight: 300;
   }
+
+  .punky-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+  }
 }
 
 /* Animaciones personalizadas */
