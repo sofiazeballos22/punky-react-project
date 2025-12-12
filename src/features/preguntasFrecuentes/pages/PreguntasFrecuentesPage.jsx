@@ -1,7 +1,9 @@
 import { openWhatsApp } from "@/utils/whatsapp";
 import { useState } from "react";
+import useTitleReveal from "@/hooks/useTitleReveal";
 
 const PreguntasFrecuentesPage = () => {
+  const { titleRef, subtitleRef } = useTitleReveal();
   const faqs = [
     {
       question: "¿Punky es un banco o una financiera?",
@@ -44,8 +46,11 @@ const PreguntasFrecuentesPage = () => {
   return (
     <section className="py-24 px-6 md:px-12 bg-white">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-10 reveal active">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-punkyDark">
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <h2
+            ref={titleRef}
+            className="title-reveal font-display text-3xl md:text-4xl font-bold mb-4 text-punkyDark"
+          >
             Preguntas frecuentes
           </h2>
           <p className="text-slate-600">
