@@ -47,7 +47,10 @@ const SolutionCard = ({
         >
           {badge.split("Punky").map((part, index, array) =>
             index === 0 ? (
-              part
+              <span key={index} className="flex items-center gap-1">
+                <span className="punky-logo-badge">P</span>
+                {part}
+              </span>
             ) : (
               <span key={index} className="flex items-center gap-1">
                 <span className="punky-title">Punky</span>
