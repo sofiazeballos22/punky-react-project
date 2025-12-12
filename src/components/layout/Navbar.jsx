@@ -1,47 +1,23 @@
 import { openWhatsApp } from "@/utils/whatsapp";
-import { useState, useEffect } from "react";
+import useNavbarActiveSection from "@/hooks/useNavbarActiveSection";
 
 const Navbar = () => {
-  const [activeSection, setActiveSection] = useState("");
+  const sections = [
+    "como-funciona",
+    "soluciones",
+    "fuerzas",
+    "abuelos",
+    "compras",
+  ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        "como-funciona",
-        "soluciones",
-        "fuerzas",
-        "abuelos",
-        "compras",
-      ];
-      const scrollPosition = window.scrollY + 100;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setActiveSection(section);
-            return;
-          }
-        }
-      }
-      setActiveSection("");
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const { activeSection, handleLinkClick } = useNavbarActiveSection(sections);
 
   const getLinkClass = (section) => {
     const baseClass = "px-4 py-2.5 rounded-full transition-all duration-300";
     const hoverClass =
-      "hover:text-violet-700 hover:bg-gradient-to-br hover:from-violet-100/40 hover:to-purple-100/40";
+      "hover:text-violet-700 hover:bg-gradient-to-br hover:from-violet-100 hover:to-purple-100";
     const activeClass =
-      "font-bold text-[15px] text-violet-700 bg-gradient-to-br from-violet-100/40 to-purple-100/40";
+      "font-bold text-[15px] text-violet-700 bg-gradient-to-br from-violet-100 to-purple-100";
 
     return activeSection === section
       ? `${baseClass} ${activeClass}`
@@ -64,19 +40,39 @@ const Navbar = () => {
         </a>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="#como-funciona" className={getLinkClass("como-funciona")}>
+          <a
+            href="#como-funciona"
+            className={getLinkClass("como-funciona")}
+            onClick={() => handleLinkClick("como-funciona")}
+          >
             Cómo funciona
           </a>
-          <a href="#soluciones" className={getLinkClass("soluciones")}>
+          <a
+            href="#soluciones"
+            className={getLinkClass("soluciones")}
+            onClick={() => handleLinkClick("soluciones")}
+          >
             Soluciones
           </a>
-          <a href="#fuerzas" className={getLinkClass("fuerzas")}>
+          <a
+            href="#fuerzas"
+            className={getLinkClass("fuerzas")}
+            onClick={() => handleLinkClick("fuerzas")}
+          >
             Fuerzas
           </a>
-          <a href="#abuelos" className={getLinkClass("abuelos")}>
+          <a
+            href="#abuelos"
+            className={getLinkClass("abuelos")}
+            onClick={() => handleLinkClick("abuelos")}
+          >
             Abuelos
           </a>
-          <a href="#compras" className={getLinkClass("compras")}>
+          <a
+            href="#compras"
+            className={getLinkClass("compras")}
+            onClick={() => handleLinkClick("compras")}
+          >
             Compras
           </a>
 
