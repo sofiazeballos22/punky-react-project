@@ -1,17 +1,26 @@
 import { openWhatsApp } from "@/utils/whatsapp";
+import useTitleReveal from "@/hooks/useTitleReveal";
 
 const ComoFuncionaPage = () => {
+  const { titleRef, subtitleRef } = useTitleReveal();
+
   return (
     <section
       id="como-funciona"
       className="bg-white/60 border-y border-slate-100/80 py-20 px-6 md:px-12"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-14 reveal active">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-punkyDark">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <h2
+            ref={titleRef}
+            className="title-reveal font-display text-3xl md:text-4xl font-bold mb-4 text-punkyDark"
+          >
             Cómo funciona <span className="punky-title">Punky</span>
           </h2>
-          <p className="text-slate-600 text-base md:text-lg">
+          <p
+            ref={subtitleRef}
+            className="subtitle-reveal text-slate-600 text-base md:text-lg"
+          >
             En menos de unos minutos, desde tu celular, tenés una guía clara de
             qué hacer y, si corresponde, acceso a crédito o derivación a un
             humano.
