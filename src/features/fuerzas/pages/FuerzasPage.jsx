@@ -1,6 +1,9 @@
 import { openWhatsApp } from "@/utils/whatsapp";
+import useTitleReveal from "@/hooks/useTitleReveal";
 
 const FuerzasPage = () => {
+  const { titleRef, subtitleRef } = useTitleReveal();
+
   return (
     <section
       id="fuerzas"
@@ -14,10 +17,16 @@ const FuerzasPage = () => {
             🅿️ <span className="punky-title">Punky</span> Fuerzas ·
             Especializado por fuerza
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">
+          <h2
+            ref={titleRef}
+            className="title-reveal font-display text-3xl md:text-4xl font-bold leading-tight"
+          >
             El módulo que entiende tu recibo, tu jerarquía y tu fuerza.
           </h2>
-          <p className="text-sm md:text-base text-slate-200 max-w-xl">
+          <p
+            ref={subtitleRef}
+            className="subtitle-reveal text-sm md:text-base text-slate-200 max-w-xl"
+          >
             <span className="punky-title">Punky</span> Fuerzas fue entrenado
             para hablar el idioma de cada fuerza: Policía Federal, Ciudad,
             Bonaerense, provinciales, SPF, PSA, Gendarmería, Prefectura,
