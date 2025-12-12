@@ -1,9 +1,13 @@
 import { openWhatsApp } from "@/utils/whatsapp";
 import ChatMessage from "../components/ChatMessage";
 import useTitleReveal from "@/hooks/useTitleReveal";
+import useCardReveal from "@/hooks/useCardReveal";
+import useSingleCardReveal from "@/hooks/useSingleCardReveal";
 
 const AbuelosPage = () => {
   const { titleRef, subtitleRef } = useTitleReveal();
+  const smallCardRefs = useCardReveal(4, 400); // 4 cards pequeñas
+  const largeCardRef = useSingleCardReveal(); // 1 card grande
 
   return (
     <section
@@ -33,7 +37,10 @@ const AbuelosPage = () => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card">
+            <div
+              ref={smallCardRefs[0]}
+              className="card-reveal-left bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card transition-transform duration-300 hover:scale-110 hover:z-10"
+            >
               <p className="font-semibold text-punkyDark mb-1">
                 💰 Haberes y descuentos
               </p>
@@ -42,7 +49,10 @@ const AbuelosPage = () => {
                 parte corresponde a la obra social o a créditos viejos.
               </p>
             </div>
-            <div className="bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card">
+            <div
+              ref={smallCardRefs[1]}
+              className="card-reveal-right bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card transition-transform duration-300 hover:scale-110"
+            >
               <p className="font-semibold text-punkyDark mb-1">
                 🏥 Obras sociales y turnos
               </p>
@@ -51,7 +61,10 @@ const AbuelosPage = () => {
                 autorizaciones y reclamos.
               </p>
             </div>
-            <div className="bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card">
+            <div
+              ref={smallCardRefs[2]}
+              className="card-reveal-left bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card transition-transform duration-300 hover:scale-110 hover:z-10"
+            >
               <p className="font-semibold text-punkyDark mb-1">
                 🧾 Cobros indebidos
               </p>
@@ -60,7 +73,10 @@ const AbuelosPage = () => {
                 o "servicios" que nunca se usaron.
               </p>
             </div>
-            <div className="bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card">
+            <div
+              ref={smallCardRefs[3]}
+              className="card-reveal-right bg-white/80 rounded-2xl border border-orange-100 p-4 text-sm shadow-card transition-transform duration-300 hover:scale-110"
+            >
               <p className="font-semibold text-punkyDark mb-1">
                 📂 Trámites previsionales
               </p>
@@ -90,7 +106,7 @@ const AbuelosPage = () => {
         </div>
 
         {/* Card de conversación con efecto typing mejorado */}
-        <div className="reveal delay-150 active">
+        <div ref={largeCardRef} className="card-reveal-top">
           <div className="bg-white rounded-[2rem] border border-orange-100 shadow-card p-8 space-y-6">
             <p className="text-xs uppercase tracking-[0.25em] text-orange-500">
               Forma de hablar de Punky Abuelos
@@ -105,7 +121,7 @@ const AbuelosPage = () => {
                 text="Me vino menos sueldo este mes, no entiendo por qué."
                 isUser={true}
                 speed={70}
-                delay={500}
+                delay={1500}
               />
 
               {/* Respuesta de Punky (derecha) */}
@@ -114,8 +130,8 @@ const AbuelosPage = () => {
                 name="Punky"
                 text="Tranquila, vamos a verlo juntos. Mandame una foto clara de tu recibo de este mes y, si podés, del mes anterior. Yo te voy marcando qué cambió."
                 isUser={false}
-                speed={35}
-                delay={5000}
+                speed={65}
+                delay={6000}
               />
 
               {/* Explicación de Punky (derecha, continuación) */}
@@ -124,8 +140,8 @@ const AbuelosPage = () => {
                 name="Punky"
                 text="Acá aparece un nuevo descuento llamado 'Servicio X'. Te explico qué significa y cómo hacer el reclamo para que te lo devuelvan."
                 isUser={false}
-                speed={35}
-                delay={12000}
+                speed={65}
+                delay={17000}
               />
             </div>
 

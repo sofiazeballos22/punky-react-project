@@ -1,8 +1,10 @@
 import { openWhatsApp } from "@/utils/whatsapp";
 import useTitleReveal from "@/hooks/useTitleReveal";
+import useCardReveal from "@/hooks/useCardReveal";
 
 const ComoFuncionaPage = () => {
   const { titleRef, subtitleRef } = useTitleReveal();
+  const cardRefs = useCardReveal(3, 500); // 3 cards con delay de 500ms entre cada una
 
   return (
     <section
@@ -29,7 +31,10 @@ const ComoFuncionaPage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 max-w-5xl mx-auto">
           {/* Paso 1 */}
-          <div className="reveal bg-white rounded-3xl shadow-card border border-slate-100 p-7 flex flex-col gap-4 active transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-br hover:from-violet-50 hover:to-purple-50 hover:-translate-y-1">
+          <div
+            ref={cardRefs[0]}
+            className="card-reveal-top bg-white rounded-3xl shadow-card border border-slate-100 p-7 flex flex-col gap-4 transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-br hover:from-violet-50 hover:to-purple-50 hover:-translate-y-1"
+          >
             <div className="w-10 h-10 rounded-2xl bg-violet-100 text-violet-700 flex items-center justify-center font-bold text-lg">
               1
             </div>
@@ -44,7 +49,10 @@ const ComoFuncionaPage = () => {
           </div>
 
           {/* Paso 2 */}
-          <div className="reveal delay-100 bg-white rounded-3xl shadow-card border border-slate-100 p-7 flex flex-col gap-4 active transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-br hover:from-indigo-50 hover:to-blue-50 hover:-translate-y-1">
+          <div
+            ref={cardRefs[1]}
+            className="card-reveal-top bg-white rounded-3xl shadow-card border border-slate-100 p-7 flex flex-col gap-4 transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-br hover:from-indigo-50 hover:to-blue-50 hover:-translate-y-1"
+          >
             <div className="w-10 h-10 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-lg">
               2
             </div>
@@ -59,7 +67,10 @@ const ComoFuncionaPage = () => {
           </div>
 
           {/* Paso 3 */}
-          <div className="reveal delay-200 bg-white rounded-3xl shadow-card border border-slate-100 p-7 flex flex-col gap-4 active transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-br hover:from-emerald-50 hover:to-teal-50 hover:-translate-y-1">
+          <div
+            ref={cardRefs[2]}
+            className="card-reveal-top bg-white rounded-3xl shadow-card border border-slate-100 p-7 flex flex-col gap-4 transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-br hover:from-emerald-50 hover:to-teal-50 hover:-translate-y-1"
+          >
             <div className="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
               3
             </div>

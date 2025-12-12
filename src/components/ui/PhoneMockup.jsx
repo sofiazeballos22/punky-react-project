@@ -10,7 +10,10 @@ const PhoneMockup = () => {
 
           {/* Header chat */}
           <div className="flex items-center gap-4 border-b border-gray-100 pb-4 mb-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-punkyAccentStart to-punkyAccentEnd rounded-full flex items-center justify-center font-display font-bold text-white text-xl shadow-sm">
+            <div
+              className="w-12 h-12 bg-[#D4D6D7] rounded-full flex items-center justify-center font-bold text-white text-xl shadow-sm"
+              style={{ fontFamily: "Roboto, sans-serif" }}
+            >
               P
             </div>
             <div>

@@ -6,6 +6,8 @@ const SolutionCard = ({
   gradientFrom,
   badgeBg,
   badgeText,
+  cardRef,
+  animationClass = "card-reveal-left",
 }) => {
   const delayClass = delay ? `delay-${delay}` : "";
 
@@ -30,11 +32,12 @@ const SolutionCard = ({
 
   return (
     <div
-      className={`reveal ${delayClass} group bg-white p-7 rounded-[1.8rem] shadow-card hover:shadow-xl transition-all duration-200 hover:-translate-y-2 border border-slate-100 ${borderHoverClasses[gradientFrom]} relative overflow-hidden active`}
+      ref={cardRef}
+      className={`${animationClass} group bg-white p-7 rounded-[1.8rem] shadow-card hover:shadow-xl transition-all duration-100 hover:-translate-y-2 border border-slate-100 ${borderHoverClasses[gradientFrom]} relative overflow-hidden`}
     >
       {/* Background gradient hover */}
       <div
-        className={`absolute inset-0 bg-gradient-to-br ${gradientClasses[gradientFrom]} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200`}
+        className={`absolute inset-0 bg-gradient-to-br ${gradientClasses[gradientFrom]} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-100`}
       />
 
       {/* Contenido */}

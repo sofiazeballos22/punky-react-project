@@ -1,8 +1,10 @@
 import { openWhatsApp } from "@/utils/whatsapp";
 import useTitleReveal from "@/hooks/useTitleReveal";
+import useSingleCardReveal from "@/hooks/useSingleCardReveal";
 
 const ComprasPage = () => {
   const { titleRef, subtitleRef } = useTitleReveal();
+  const cardRef = useSingleCardReveal();
 
   return (
     <section
@@ -81,7 +83,7 @@ const ComprasPage = () => {
           </div>
 
           {/* Cards de ejemplo */}
-          <div className="reveal delay-150 active">
+          <div ref={cardRef} className="card-reveal-bottom">
             <div className="bg-white/10 border border-white/20 rounded-[2rem] p-5 sm:p-6 backdrop-blur shadow-[0_30px_80px_rgba(0,0,0,0.7)] space-y-4">
               <p className="text-xs uppercase tracking-[0.25em] text-slate-300">
                 Ejemplo de análisis de compra
