@@ -17,7 +17,8 @@ const AbuelosPage = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.3fr,1fr] gap-16 items-center">
         <div className="reveal space-y-6 active">
           <p className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-100 text-[12px] font-semibold text-amber-800">
-            🅿️ <span className="punky-title">Punky</span> Abuelos · Pensado para
+            <span className="punky-logo-badge">P</span>{" "}
+            <span className="punky-title">Punky</span> Abuelos · Pensado para
             explicar despacio
           </p>
           <h2
