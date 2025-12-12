@@ -1,9 +1,11 @@
 import { openWhatsApp } from "@/utils/whatsapp";
 import { useState } from "react";
 import useTitleReveal from "@/hooks/useTitleReveal";
+import useCardReveal from "@/hooks/useCardReveal";
 
 const PreguntasFrecuentesPage = () => {
   const { titleRef, subtitleRef } = useTitleReveal();
+  const faqCardRefs = useCardReveal(4, 350); // 4 FAQs con delay de 350ms
   const faqs = [
     {
       question: "¿Punky es un banco o una financiera?",
@@ -62,7 +64,8 @@ const PreguntasFrecuentesPage = () => {
           {faqs.map((faq, index) => (
             <details
               key={index}
-              className="reveal bg-slate-50 rounded-2xl border border-slate-100 px-5 py-4 active"
+              ref={faqCardRefs[index]}
+              className="card-reveal-top bg-slate-50 rounded-2xl border border-slate-100 px-5 py-4"
               open={openStates[index]}
               onClick={(e) => {
                 e.preventDefault();
