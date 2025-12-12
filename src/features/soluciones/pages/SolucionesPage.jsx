@@ -4,7 +4,7 @@ import SolutionCard from "../components/SolutionCard";
 const SolucionesPage = () => {
   const solutions = [
     {
-      badge: "🅿️ Punky Fuerzas",
+      badge: "🅿️  Punky  Fuerzas",
       title: "Fuerzas Armadas y de Seguridad",
       description:
         "Normativa oficial, recibos de haberes, descuentos, obra social y trámites internos. Reglas específicas por fuerza y protocolo claro para crédito por Decreto 1412.",
@@ -14,7 +14,7 @@ const SolucionesPage = () => {
       delay: 0,
     },
     {
-      badge: "🅿️ Punky Créditos",
+      badge: "🅿️  Punky  Créditos",
       title: "Crédito por recibo o CBU",
       description:
         "Análisis de disponible al instante, sin hojas de cálculo. Explicación de montos, cuotas y límites. Acompañamiento hasta la firma, siempre que sea conveniente para vos.",
@@ -24,7 +24,7 @@ const SolucionesPage = () => {
       delay: 50,
     },
     {
-      badge: "🅿️ Punky Abuelos",
+      badge: "🅿️  Punky  Abuelos",
       title: "Jubilados y pensionados",
       description:
         "Explicaciones lentas, claras y sin letra chica. Haberes, descuentos, obras sociales, turnos, reclamos y defensa ante cobros indebidos.",
@@ -73,11 +73,13 @@ const SolucionesPage = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16 reveal active">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-punkyDark">
-            Un solo Punky, muchas soluciones
+            Un solo <span className="punky-title">Punky</span>, muchas
+            soluciones
           </h2>
           <p className="text-lg text-slate-600">
-            Punky integra todos tus mundos: sueldo, fuerza, jubilación, compras
-            online, impuestos y derechos como consumidor.
+            <span className="punky-title">Punky</span> integra todos tus mundos:
+            sueldo, fuerza, jubilación, compras online, impuestos y derechos
+            como consumidor.
           </p>
         </div>
 
