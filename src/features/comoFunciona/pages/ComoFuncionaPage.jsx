@@ -9,7 +9,7 @@ const ComoFuncionaPage = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-14 reveal active">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-punkyDark">
-            Cómo funciona Punky
+            Cómo funciona <span className="punky-title">Punky</span>
           </h2>
           <p className="text-slate-600 text-base md:text-lg">
             En menos de unos minutos, desde tu celular, tenés una guía clara de
@@ -28,8 +28,9 @@ const ComoFuncionaPage = () => {
               Chateás por WhatsApp
             </h3>
             <p className="text-slate-600 text-sm">
-              Le contás a Punky, con tus palabras, quién sos y qué necesitás
-              resolver: fuerza, trabajo, jubilación, compra, reclamo o duda.
+              Le contás a <span className="punky-title">Punky</span>, con tus
+              palabras, quién sos y qué necesitás resolver: fuerza, trabajo,
+              jubilación, compra, reclamo o duda.
             </p>
           </div>
 
@@ -42,9 +43,9 @@ const ComoFuncionaPage = () => {
               Análisis inteligente
             </h3>
             <p className="text-slate-600 text-sm">
-              Punky combina información oficial, reglas específicas por fuerza y
-              herramientas internas para entender tu situación y calcular montos
-              o pasos a seguir.
+              <span className="punky-title">Punky</span> combina información
+              oficial, reglas específicas por fuerza y herramientas internas
+              para entender tu situación y calcular montos o pasos a seguir.
             </p>
           </div>
 
