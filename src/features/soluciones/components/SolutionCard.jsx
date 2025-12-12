@@ -40,9 +40,18 @@ const SolutionCard = ({
       {/* Contenido */}
       <div className="relative z-10">
         <p
-          className={`inline-flex items-center px-3 py-1 rounded-full ${badgeBg} text-[11px] font-semibold ${badgeText} mb-4`}
+          className={`inline-flex items-center px-3 py-1 rounded-full ${badgeBg} text-[11px] font-semibold ${badgeText} mb-4 gap-1`}
         >
-          {badge}
+          {badge.split("Punky").map((part, index, array) =>
+            index === 0 ? (
+              part
+            ) : (
+              <span key={index} className="flex items-center gap-1">
+                <span className="punky-title">Punky</span>
+                {part}
+              </span>
+            )
+          )}
         </p>
         <h3 className="font-display text-xl font-bold mb-3 text-punkyDark">
           {title}
