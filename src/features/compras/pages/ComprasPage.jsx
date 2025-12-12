@@ -17,8 +17,9 @@ const ComprasPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr,1fr] gap-14 items-center">
           <div className="reveal space-y-5 active">
             <p className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[12px] font-semibold">
-              🅿️ <span className="punky-title">Punky</span> Compras · Comprá
-              mejor, no más caro
+              <span className="punky-logo-badge">P</span>{" "}
+              <span className="punky-title">Punky</span> Compras · Comprá mejor,
+              no más caro
             </p>
             <h2
               ref={titleRef}
