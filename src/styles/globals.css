@@ -139,6 +139,86 @@
   transition-delay: 0.5s;
 }
 
+.reveal.delay-600 {
+  transition-delay: 0.6s;
+}
+
+.reveal.delay-700 {
+  transition-delay: 0.7s;
+}
+
+.reveal.delay-800 {
+  transition-delay: 0.8s;
+}
+
+.reveal.delay-900 {
+  transition-delay: 0.9s;
+}
+
+.reveal.delay-1000 {
+  transition-delay: 1s;
+}
+
+.reveal.delay-1100 {
+  transition-delay: 1.1s;
+}
+
+/* Animación de cards de arriba hacia abajo (gradual secuencial) */
+.card-reveal-top {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.card-reveal-top.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación de cards de abajo hacia arriba (gradual) */
+.card-reveal-bottom {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.card-reveal-bottom.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación 3D de izquierda a derecha */
+.card-reveal-left {
+  opacity: 0;
+  transform: perspective(800px) rotateY(-60deg) scale(0.85);
+  transform-origin: left center;
+  transition: all 1.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.card-reveal-left.active {
+  opacity: 1;
+  transform: perspective(800px) rotateY(0deg) scale(1);
+}
+
+/* Animación 3D de derecha a izquierda */
+.card-reveal-right {
+  opacity: 0;
+  transform: perspective(800px) rotateY(60deg) scale(0.85);
+  transform-origin: right center;
+  transition: all 1.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.card-reveal-right.active {
+  opacity: 1;
+  transform: perspective(800px) rotateY(0deg) scale(1);
+}
+
 /* Cursor parpadeante para efecto máquina de escribir */
 .typing-cursor {
   display: inline-block;
