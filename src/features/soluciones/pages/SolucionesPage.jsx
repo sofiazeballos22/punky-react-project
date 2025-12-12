@@ -5,7 +5,7 @@ import useCardReveal from "@/hooks/useCardReveal";
 
 const SolucionesPage = () => {
   const { titleRef, subtitleRef } = useTitleReveal();
-  const cardRefs = useCardReveal(6, 450); // 6 cards con delay de 450ms
+  const cardRefs = useCardReveal(6, 250); // 6 cards con delay de 250ms
   const solutions = [
     {
       badge: "Punky  Fuerzas",
