@@ -1,9 +1,11 @@
 import { openWhatsApp } from "@/utils/whatsapp";
 import SolutionCard from "../components/SolutionCard";
 import useTitleReveal from "@/hooks/useTitleReveal";
+import useCardReveal from "@/hooks/useCardReveal";
 
 const SolucionesPage = () => {
   const { titleRef, subtitleRef } = useTitleReveal();
+  const cardRefs = useCardReveal(6, 450); // 6 cards con delay de 450ms
   const solutions = [
     {
       badge: "🅿️  Punky  Fuerzas",
@@ -92,9 +94,23 @@ const SolucionesPage = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-8">
-          {solutions.map((solution, index) => (
-            <SolutionCard key={index} {...solution} />
-          ))}
+          {solutions.map((solution, index) => {
+            // Primera fila (0,1,2): izquierda a derecha
+            // Segunda fila (3,4,5): derecha a izquierda
+            const isFirstRow = index < 3;
+            const animationClass = isFirstRow
+              ? "card-reveal-left"
+              : "card-reveal-right";
+
+            return (
+              <SolutionCard
+                key={index}
+                {...solution}
+                cardRef={cardRefs[index]}
+                animationClass={animationClass}
+              />
+            );
+          })}
         </div>
 
         <div className="mt-12 text-center reveal active">
