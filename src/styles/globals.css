@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Estilos del branding Punky */
+@layer components {
+  .punky-logo {
+    @apply h-10 w-10 rounded-full bg-[#D4D6D7] flex items-center justify-center text-white font-bold text-xl;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .punky-logo-sm {
+    @apply h-8 w-8 rounded-full bg-[#D4D6D7] flex items-center justify-center text-white font-bold text-lg;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .punky-brand-title {
+    @apply text-2xl leading-none text-punkyDark flex items-end gap-0.5;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+  }
+
+  .punky-brand-registered {
+    @apply text-[12px] self-end;
+    font-weight: 300;
+  }
+}
+
 /* Animaciones personalizadas */
 @layer utilities {
   .float-animation {
