@@ -1,7 +1,10 @@
 import { openWhatsApp } from "@/utils/whatsapp";
 import ChatMessage from "../components/ChatMessage";
+import useTitleReveal from "@/hooks/useTitleReveal";
 
 const AbuelosPage = () => {
+  const { titleRef, subtitleRef } = useTitleReveal();
+
   return (
     <section
       id="abuelos"
@@ -13,10 +16,16 @@ const AbuelosPage = () => {
             🅿️ <span className="punky-title">Punky</span> Abuelos · Pensado para
             explicar despacio
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-punkyDark">
+          <h2
+            ref={titleRef}
+            className="title-reveal font-display text-3xl md:text-4xl font-bold text-punkyDark"
+          >
             Para vos o para tus viejos: jubilaciones explicadas con paciencia.
           </h2>
-          <p className="text-slate-700 text-base md:text-lg max-w-xl">
+          <p
+            ref={subtitleRef}
+            className="subtitle-reveal text-slate-700 text-base md:text-lg max-w-xl"
+          >
             <span className="punky-title">Punky</span> Abuelos está diseñado
             para hablar simple, sin abreviaturas ni términos raros. Ideal para
             que un hijo o nieto chatee por los abuelos, o para que el propio
