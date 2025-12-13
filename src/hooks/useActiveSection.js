@@ -2,54 +2,68 @@ import { useState, useEffect, useRef } from "react";
 
 /**
  * Hook para detectar qué sección está actualmente visible en el viewport
+ * Usa IntersectionObserver para mejor rendimiento y compatibilidad
  * @param {Array<string>} sections - Array de IDs de las secciones a monitorear
- * @param {number} offset - Offset desde el top para determinar la sección activa (default: 100)
+ * @param {number} offset - Offset desde el top (no usado, mantenido por compatibilidad)
  * @returns {Object} { activeSection, setActiveSection } - Sección activa y función para cambiarla manualmente
  */
 export const useActiveSection = (sections = [], offset = 100) => {
   const [activeSection, setActiveSection] = useState("");
-  const scrollTimeoutRef = useRef(null);
   const isClickingRef = useRef(false);
+  const observerRef = useRef(null);
 
   const handleSetActiveSection = (section) => {
     isClickingRef.current = true;
     setActiveSection(section);
     
-    // Reactivar detección por scroll después de que termine el scroll suave
-    if (scrollTimeoutRef.current) {
-      clearTimeout(scrollTimeoutRef.current);
-    }
-    scrollTimeoutRef.current = setTimeout(() => {
+    // Reactivar detección automática después del scroll
+    setTimeout(() => {
       isClickingRef.current = false;
     }, 1000);
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (isClickingRef.current) return; // Ignorar scroll durante navegación por click
-      
-      const scrollPosition = window.scrollY + offset;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            return;
-          }
-        }
-      }
-      setActiveSection("");
+    // Configurar IntersectionObserver
+    const observerOptions = {
+      root: null,
+      rootMargin: `-${offset}px 0px -50% 0px`,
+      threshold: [0, 0.1, 0.25, 0.5, 0.75, 1]
     };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check initial position
-    
+    const observerCallback = (entries) => {
+      if (isClickingRef.current) return;
+
+      // Encontrar la sección con mayor visibilidad
+      let mostVisibleSection = null;
+      let maxRatio = 0;
+
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
+          maxRatio = entry.intersectionRatio;
+          mostVisibleSection = entry.target.id;
+        }
+      });
+
+      if (mostVisibleSection) {
+        setActiveSection(mostVisibleSection);
+      } else if (!entries.some(e => e.isIntersecting)) {
+        setActiveSection("");
+      }
+    };
+
+    observerRef.current = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observar todas las secciones
+    sections.forEach(sectionId => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        observerRef.current.observe(element);
+      }
+    });
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
+      if (observerRef.current) {
+        observerRef.current.disconnect();
       }
     };
   }, [sections, offset]);
