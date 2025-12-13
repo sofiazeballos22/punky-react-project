@@ -131,7 +131,7 @@ const AbuelosPage = () => {
                 name="Punky"
                 text="Tranquila, vamos a verlo juntos. Mandame una foto clara de tu recibo de este mes y, si podés, del mes anterior. Yo te voy marcando qué cambió."
                 isUser={false}
-                speed={65}
+                speed={70}
                 delay={6000}
               />
 
@@ -141,7 +141,7 @@ const AbuelosPage = () => {
                 name="Punky"
                 text="Acá aparece un nuevo descuento llamado 'Servicio X'. Te explico qué significa y cómo hacer el reclamo para que te lo devuelvan."
                 isUser={false}
-                speed={65}
+                speed={70}
                 delay={17000}
               />
             </div>
